@@ -26,7 +26,15 @@ bottles_bought = (money.to_i / 2).floor
 
   end
 
-  puts "For $#{@money} you can trade in #{@total_bottles_traded} bottles."
+    puts "For $#{@money} you can trade in #{@total_bottles_traded} bottles."
+
+  if @bottles_to_trade == 1 && @caps_to_trade == 1
+    puts "You have one bottle and one cap left over."
+  elsif @bottles_to_trade == 1
+    puts "You have one bottle and #{@caps_to_trade} caps left over."
+  else
+    puts "You have #{@bottles_to_trade} bottles and #{@caps_to_trade} caps left over."
+  end
 
 end
 
